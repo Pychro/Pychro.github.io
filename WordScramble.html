@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Word Scramble Code</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+
+    <!-- Intro -->
+    <div id="intro">
+        <h1>Word Scramble</h1>
+        <p>This is the code to my Word Scramble program.</p>
+        <ul class="actions">
+            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+
+
+        </ul>
+        <ul class="icons">
+
+            <li><a href="https://github.com/Pychro" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <pre>
+    <div id="main">
+
+        import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+
+public class WordScramble
+{
+	public static void main(String[] args) throws FileNotFoundException
+	{
+		Scanner keyboard = new Scanner(System.in);
+
+		java.lang.String continuePlaying = "yes";
+
+		int score = 0;
+		int pointsPossible = 0;
+
+		System.out.println("Welcome to Java Word Scramble!");
+		System.out.println("------------------------------");
+
+		while (continuePlaying.equalsIgnoreCase("yes"))
+		{
+			System.out.println();
+			String word = randomWord();
+			String scrambledWord = wordScrambler(word);
+			int numGuesses = 0;
+			gamePlayer(word, scrambledWord);
+			int wordPoints = word.length() - 1;
+			int pointsEarned = word.length() - numGuesses;
+			gameResults(pointsEarned, wordPoints, word);
+
+			score += pointsEarned;
+			pointsPossible += wordPoints;
+			System.out.println("Score: " + score);
+			System.out.println("Max possible points: " + pointsPossible);
+			System.out.println("Do you want to play again (yes/no)?");
+			continuePlaying = keyboard.nextLine();
+		}
+
+		System.out.println("Thanks for playing!");
+		keyboard.close();
+	}
+
+
+public static String wordScrambler(String word) {
+	// Construct StringBuilder objects used to scramble the word. The
+	// StringBuilder class is like String, but it has different methods
+	// like delete and append that are useful here.
+	StringBuilder tempWord = new StringBuilder(word);
+	StringBuilder scrambledTempWord = new StringBuilder();
+
+	// Repeatedly choose a random letter to remove from tempWord.
+	// Append these letters to scrambledTempWord to form the scrambled
+	// word.
+	while (tempWord.length() > 0)
+	{
+		int letterIndex = (int) (Math.random() * tempWord.length());
+		char letter = tempWord.charAt(letterIndex);
+		tempWord.deleteCharAt(letterIndex);
+		scrambledTempWord.append(letter);
+	}
+	// Create a regular String copy of the scrambled word.
+	String scrambledWord = scrambledTempWord.toString();
+	return scrambledWord;
+}
+
+
+
+
+public static String randomWord() throws FileNotFoundException {
+	// Construct a Scanner and connect it to the text file that
+	// contains the words.
+	Scanner dictionary = new Scanner(new File("dictionary.txt"));
+
+	// The first line of the text file contains an integer that
+	// specifies the number of words in the file. Read this number and
+	// skip the following newline character.
+	int numWords = dictionary.nextInt();
+	dictionary.nextLine();
+
+	// The remaining lines of the file each contain a single word.
+	// Choose a random number of lines to skip.
+	int numSkip = (int) (Math.random() * numWords);
+
+	// Skip the lines and read the randomly chosen word.
+	for (int i = 0; i < numSkip; ++i)
+	{
+		dictionary.nextLine();
+	}
+	String word = dictionary.nextLine();
+
+	// Close the file now that the word has been chosen.
+	dictionary.close();
+	return word;
+}
+
+
+public static int gamePlayer(String word, String scrambledWord) {
+	Scanner keyboard = new Scanner(System.in);
+	int numGuesses = 0;
+	String guess;
+	for (numGuesses = 1; numGuesses <= word.length() - 1; ++numGuesses)
+	{
+		System.out.println("Scrambled word: " + scrambledWord);
+
+		// Print a hint after the first guess.
+		if (numGuesses > 1) {
+			System.out.println("          Hint: "
+					+ word.substring(0, numGuesses - 1));
+		}
+
+		// Prompt the user and print the number of remaining guesses.
+		System.out.println("What is your guess? ("
+				+ (word.length() - numGuesses) + " guesses left)");
+
+		// Get the guess and exit the loop if it is correct.
+		guess = keyboard.nextLine();
+		if (guess.equalsIgnoreCase(word)) {
+		break;
+		}
+	}
+	keyboard.close();
+	return numGuesses;
+}
+
+
+public static void gameResults (int pointsEarned, int wordPoints, String word) {
+	// If the user earned 0 points, show them the correct word.
+	// Otherwise, tell them how many points they wo
+
+	if (pointsEarned == 0) {
+		System.out.println("Sorry, the scrambled word was \"" + word + "\".");
+	}
+	else {
+		System.out.println("Congratulations! You earned "
+				+ pointsEarned + " out of " + wordPoints
+				+ " possible points.");
+	}
+}
+}
+
+    </div>
+   </pre>
+    <!-- Footer -->
+    <footer id="footer">
+
+        <section class="split contact">
+
+            <section>
+                <h3>Phone</h3>
+                <p><a href="#">(918)-338-9721</a></p>
+            </section>
+            <section>
+                <h3>Email</h3>
+                <p><a href="#">Trevherring22@gmail.com</a></p>
+            </section>
+
+        </section>
+    </footer>
+
+
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
