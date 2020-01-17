@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<script>
+  function computeAnswer(){
+    var number1, number2;
+    number1 = parseFloat (document.Form1.number1.value);
+    number2 = parseFloat (document.Form1.number2.value);
+
+    document.Form1.result.value= number1 + number2;
+  }
+</script>
+
+<h2>
+  Javascript Calculator
+</h2>
+Trevor Herring
+<body>
+<form name = "Form1">
+  Number 1: <input type = "text" name = "number1" value = "15"> <p></p>
+  Number 1: <input type = "text" name = "number2" value = "15"> <p></p>
+  <input type="button" value="Calculate Total" onclick="computeAnswer()"> <p></p>
+  Total: <input type="text" name="result"> <p></p>
+
+</form>
+</body>
+</html>
