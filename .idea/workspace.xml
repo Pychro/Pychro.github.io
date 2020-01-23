@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b39d35d2-ff12-427b-ac37-17e0e6ecaef3" name="Default Changelist" comment="" />
+    <list default="true" id="b39d35d2-ff12-427b-ac37-17e0e6ecaef3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assignment2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1.php" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +16,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,6 +35,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/xampp/php/php.ini" />
@@ -51,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579295341537</updated>
       <workItem from="1579295342648" duration="3072000" />
+      <workItem from="1579724917733" duration="6671000" />
     </task>
     <servers />
   </component>
@@ -70,13 +84,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="277" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579297798051" />
-    <state x="1274" y="443" key="NewPhpFileDialog" timestamp="1579724991030">
+    <state x="1274" y="443" key="NewPhpFileDialog" timestamp="1579736130804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1274" y="443" key="NewPhpFileDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579724991030" />
+    <state x="1274" y="443" key="NewPhpFileDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579736130804" />
     <state x="922" y="165" key="SettingsEditor" timestamp="1579297801262">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="165" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579297801262" />
+    <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1579732255924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579732255924" />
   </component>
 </project>
