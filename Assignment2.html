@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function computeGrade() {
+            var exam1, exam2, exam3;
+            exam1 = parseFloat(document.form1.exam1.value);
+            exam2 = parseFloat(document.form1.exam2.value);
+            exam3 = parseFloat(document.form1.exam3.value);
+
+         average = (exam1 + exam2 + exam3) / 3;
+         average = Math.round(average * 100) / 100;
+
+         document.form1.average.value = average;
+
+         if(average >= 70){
+             document.form1.status.value = "Passing";
+         }
+         else{
+             document.form1.status.value = "Failing";
+         }
+
+         if(average >= 90){
+             document.form1.grade.value = "A";
+         }
+         else if(average >= 80){
+             document.form1.grade.value = "B";
+         }
+         else if(average >= 70){
+             document.form1.grade.value = "C";
+         }
+         else if(average >= 60){
+             document.form1.grade.value = "D";
+         }
+         else if(average < 60){
+             document.form1.grade.value = "F";
+         }
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Grade Calculator</title>
+</head>
+<body>
+
+    <h1>Grade Calculator</h1>
+    Trevor Herring
+
+    <form name="form1">
+        Exam 1: <input type="text" name="exam1" size="5" value="80"> <p></p>
+        Exam 2: <input type="text" name="exam2" size="5" value="85"> <p></p>
+        Exam 3: <input type="text" name="exam3" size="5" value="95"> <p></p>
+
+        <input type="button" value="Calculate Grade" onclick="computeGrade()"> <p></p>
+
+        Average: <input type="text" name="average" size="5"> <p></p>
+        Status: <input type="text" name="status" size="5"> <p></p>
+        Grade: <input type="text" name="grade" size="5"> <p></p>
+
+    </form>
+
+
+</body>
+</html>
